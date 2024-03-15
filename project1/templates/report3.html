@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report3</title>
+    <style>
+        table{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+   
+    <h1>Report of client form</h1>
+    <table border="15">
+        {% if formclient %}
+        <thead>
+            <th>com_name</th>
+            <th>location</th>
+            <th>duration</th>
+            <th>services</th>
+        </thead>
+        {% for c in formclient %}
+        <tr>
+            <td>{{c.com_name}}</td>
+            <td>{{c.location}} </td>
+            <td>{{c.duration}} </td>
+            <td>{{c.services}} </td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </table>
+   
+</body>
+</html>

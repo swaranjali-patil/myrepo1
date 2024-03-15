@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry form</title>
+    <link rel="stylesheet" href="{% static 'css/enquiry.css' %}">
+</head>
+<body>
+  <center><h1>Enquiry Form</h1></center>
+    <div class="customer-enquiry">
+        <form action="{%url 'qry' %}" class="customer" method="POST">
+             {%csrf_token%}
+            <!-- <h2>GET IN TOUCH</h2> -->
+            <input type="text" id="name" name="enq_name" placeholder="Enter your name" required/>
+            <input type="Email" id="email"  name="enq_email" placeholder="Enter your email" required/>
+            <input type="phone" id="phone" name="enq_phone" placeholder="Enter your phone number" required/>
+            <input type="text" id="location" name="enq_location"  placeholder="Enter your location" required/>
+            <label for="sevices" class="customer-service">Services:</label>
+            <select name="services" id="service" >
+                <option value="Interior Designing">Interior Designing</option>
+                <option value="Fashion Designing">Fashion Designing</option>
+                <option value="Jewellery Designing">Jewellery Designing</option>
+            </select>
+            <button type="submit">send</button>
+        </form>
+    </div>
+</body>
+</html>

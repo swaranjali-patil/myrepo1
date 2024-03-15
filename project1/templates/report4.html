@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report4</title>
+    <style>
+        table{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+   
+    <h1>Report of Enquiry form</h1>
+    <table border="15">
+        {%if doenqui %}
+        <thead>
+            <th>enq_name</th>
+            <th> enq_email</th>
+            <th>enq_phone</th>
+            <th>enq_location</th>
+            <th>enq_service</th>
+        </thead>
+        {% for e in doenqui %}
+        <tr>
+            <td>{{e.enq_name}} </td>
+            <td>{{e.enq_email}} </td>
+            <td>{{e.enq_phone}} </td>
+            <td>{{e.enq_location}} </td>
+            <td>{{e.enq_service}} </td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </table>
+   
+</body>
+</html>

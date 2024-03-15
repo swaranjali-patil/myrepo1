@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+
+<head>
+
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svs</title>
+    <!-- swiper css link -->
+    <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'script/card.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/card.css' %}"> 
+    <link rel="stylesheet"
+        href="{% static 'css/card2.css' %}">
+    <link rel="stylesheet" href="{% static 'css/card3.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato&family=Merriweather&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- <div class="container">
+            <nav>
+                <img src="{% static 'images/logo.jpg' %}" class="logo" alt="">
+                <ul>
+                    <li><a href="#home" class="nav_items">HOME</a></li>
+                    <li><a href="#second" class="nav_items">PROFILES</a></li>
+                    <li><a href="#fourth" class="nav_items">ABOUT US</a></li>
+                    <li><a href="lgn" class="nav_items">LOGIN</a></li>
+                    <li><a href="sgn" class="nav_items">SIGN IN</a></li>
+                    <li><a href="enq" class="nav_items">ENQUIRY</a></li>
+                </ul>
+            </nav>
+            <div class="content">
+                <h1>If You Can Dream It, We Can Design It.</h1>
+                
+            </div>
+        </div>  -->
+    <section id="home">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="{% static 'images/logo.jpg' %}" class="logo" alt="">
+                </div>
+                <div class="menu">
+                    <a href="#home">HOME</a>
+                    <a href="#second">PROFILES</a>
+                    <a href="#fourth">ABOUT US</a>
+                    <a href="lgn">LOGIN</a>
+                    <a href="sgn">SIGN IN</a>
+                    <a href="enq">ENQUIRY</a>
+                </div>
+                <div class="toggle-btn" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="content">
+                <h1>If You Can Dream It, We Can Design It.</h1>
+
+            </div>
+        </div>
+        <script src="{% static 'script/nav.js' %}"></script>
+    </section>
+    <!-- 3 profiles sections -->
+    <section id="second">
+        <div class="heading">
+            <center>
+                <h1 class="sec-heading">Design your clothes, house, jewellery <br>as you want...</h1>
+            </center>
+        </div>
+        <center>
+            <div class="row">
+                <a href="car1">
+                    <div class="col col1">
+
+                    </div>
+                </a>
+                <a href="car2">
+                    <div class="col col2">
+                        <!-- <a href="interior.html"> <img src="interior4.jpg" alt="Clickable img"></a> -->
+                    </div>
+                </a>
+                <a href="car3">
+                    <div class="col col3">
+                        <!-- <a href="jwellery.html"> <img src="jewe4.jpg" alt="Clickable img"> </a> -->
+                    </div>
+                </a>
+            </div>
+        </center>
+    </section>
+    <section class="Third">
+        <!-- <section id="buttons">
+             <div class="all-button-wrapper">
+                <div class="upper-box">
+                    <ul class="upper-tabs-box">
+                        <li class="tab" id="home" onclick="initComparisons1()">Home</li>
+                        <li class="tab" id="office" onclick="changeContent">Office</li>
+                        <li class="tab">Western Wear</li>
+                        <li class="tab">Diamond Jewellery</li>
+                        <li class="tab">Restaurant</li>
+                        <li class="tab">Caffe</li>
+                        <li class="tab">Traditional wear</li>
+                        <li class="tab">Gold Jewellery</li>
+                        <li class="tab">Gym</li>
+                    </ul>
+                </div>
+                <div class="lower-box">
+                    <ul class="lower-tabs-box">
+                        <li class="tab">Bedroom</li>
+                        <li class="tab">Kitchen</li>
+                        <li class="tab">Feastive Clothes</li>
+                        <li class="tab">Rings</li>
+                        <li class="tab">Living room</li>
+                        <li class="tab">Library</li>
+                    </ul>
+                </div>
+            </div> 
+        </section> -->
+        <div class="slider-container swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- <div id="slider1" class="img-comp-container swiper-slide">
+                    <div class="img-comp-img">
+                        <img src="{% static  'images/jewe3.jpg' %}" width="700" height="400">
+                    </div>
+                    <div class="img-comp-img img-comp-overlay1">
+                        <img src="{% static  'images/jewe4.jpg' %}" width="700" height="400">
+                    </div>
+                </div>
+                <div class="img-comp-container swiper-slide">
+                    <div class="img-comp-img ">
+                        <img src="{% static  'images/int11.jpg' %}" width="700" height="400">
+                    </div>
+                    <div class="img-comp-img img-comp-overlay2">
+                        <img src="{% static  'images/int13.jpg' %}" width="700" height="400">
+                    </div>
+                </div> -->
+                <img class="swiper-slide after-before" src="{% static  'images/comparision1.jpg' %}" alt="" height="70%" width="100%">
+                <img class="swiper-slide after-before" src="{% static  'images/comparision2.jpg' %}" alt="" height="70%" width="100%">
+                <img class="swiper-slide after-before" src="{% static  'images/comparision3.jpg' %}" alt="" height="70%" width="100%">
+                <img class="swiper-slide after-before" src="{% static  'images/comparision4.jpg' %}" alt="" height="70%" width="100%">
+                <img class="swiper-slide after-before" src="{% static  'images/comparision5.jpg' %}" alt="" height="70%" width="100%">
+                <img class="swiper-slide after-before" src="{% static  'images/comparision6.jpg' %}" alt="" height="70%" width="100%">
+                <img class="swiper-slide after-before" src="{% static  'images/comparision7.jpg' %}" alt="" height="70%" width="100%">
+
+
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <script src="{% static 'script/swiper-bundle.min.js' %}"></script>
+        <script>
+            initComparisons1();
+            initComparisons2();
+        </script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                spaceBetween: 30,
+                hashNavigation: {
+                    watchState: true,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        </script>
+    </section>
+
+    <!-- ---------------Services------------------- -->
+    <section id="three-ben">
+
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#fff" fill-opacity="1"
+                d="M0,128L48,149.3C96,171,192,213,288,192C384,171,480,85,576,42.7C672,0,768,0,864,16C960,32,1056,64,1152,74.7C1248,85,1344,75,1392,69.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+        </svg>
+        <div class="benifits">
+            <div class="time box">
+                <i class="fa-solid fa-alarm-clock"></i>
+                <h1>Save Time</h1>
+                <p>Realistic 3D model & top professional help to take the guesswork out of the designing process.</p>
+            </div>
+            <div class="money box">
+                <i class="fa-solid fa-hand-holding-circle-dollar"></i>
+                <h1>Save Money</h1>
+                <p>Top talent for up to 80% less than traditional interior design & trade discounts of 5% to 45% at the
+                    top vendors. </p>
+            </div>
+            <div class="use box">
+                <i class="fa-solid fa-box-heart"></i>
+                <h1>Convenient & Stress Free</h1>
+                <p>A fun and easy white-glove service including everything from design to convenient ordering.</p>
+            </div>
+        </div>
+    </section>
+    <!-- --------------------Client's form------------------ -->
+    <section id="client-form">
+        <div class="client-wrapper">
+            <h2 class="client-head">Clients </h2>
+            <form action="{% url 'cli' %} " method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name" class="client-label">Name</label>
+                    <input type="text" name="com_name" id="com_name" placeholder="Enter company name" required
+                        minlength="3" maxlength="25" />
+                </div>
+                <div class="form-group">
+                    <label for="text">Location</label>
+                    <input type="text" name="location" id="location" placeholder="Mumbai/Delhi/Banglore etc" required />
+                </div>
+                <div class="form-group">
+                    <label for="duration">Duration</label>
+                    <textarea name="duration" id="duration" rows="1" placeholder="1-2 months"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="duration">Services provided by you...</label>
+                    <select name="services" id="services">
+                        <option value="Interior Designing">Interior Designing</option>
+                        <option value="Fashion Designing">Fashion Designing</option>
+                        <option value="Jewellery Designing">Jewellery Designing</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="submit client-button"><i class="far fa-paper-plane"></i>Send</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- ---------Number count---------------- -->
+
+    <section id="counter-section">
+        <!-- <div style="min-height: 15em;"></div> -->
+        <div class="counters">
+            <div>
+                <div class="counter-left">
+                    <div class="counter">
+                        <h1><span data-count="1654">0</span>+</h1><br>
+                        <h3>Number of people visited to our website</h3>
+                        <!-- <h3>Lorem ipsum</h3> -->
+                    </div>
+                    <div class="counter">
+                        <h1><span data-count="750">0</span>+</h1>
+                        <h3>Deals we done till now.</h3>
+                        <!-- <h3>Lorem, ipsum.</h3> -->
+                    </div>
+                </div>
+                <div class="counter-right">
+                    <div class="counter">
+                        <h1><span data-count="234">0</span>+</h1>
+                        <h3>Satisfied clients</h3>
+                    </div>
+                    <div class="counter">
+                        <h1><span data-count="20">0</span></h1>
+                        <h3>Years Experience</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div style="min-height: 15em;"></div> -->
+    </section>
+    <script src="{% static 'script/counter.js' %}"></script>
+    <!-- --------------About Us------------- -->
+    <section id="fourth">
+        <div class="wrapper">
+            <div class="background-color">
+                <div class="bg-1">
+
+                </div>
+                <!-- <div class="bg-2"></div> -->
+            </div>
+            <div class="about-container">
+                <div class="image-container">
+                    <img src="{% static  'images/fashion2.jpg' %}" alt="">
+                </div>
+                <div class="text-container">
+                    <h1>About us</h1>
+                    <p>"We recomended CD as the best online design service due to its comprehensive full service
+                        offerings"</p>
+                    <a href="" class="read_more">Read more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- -------------Review Page---------------- -->
+    <section id="reviews">
+        <div class="getter">
+            <h3>Your review for SVS...</h3>
+            <form action="{% url 'get' %}" method="POST">
+                {% csrf_token %}
+                <div class="rating">
+                    <input type="number" name="rating" hidden>
+                    <div class="stars">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <textarea name="opinion" cols="30" rows="5" placeholder="Your opinion..."></textarea>
+                <div class="btn-group">
+                    <input type="submit" class="btn submit" value="Submit">
+                    <button class="btn cancel">Cancel</button>
+                </div>
+            </form>
+        </div>
+        <script src="{% static 'script/review.js' %}"></script>
+    </section>
+
+
+    <!-- -------------Footer---------------- -->
+    <section id="footer">
+        <div class="footer-section">
+            <div class="footer-item">
+                <h2>About Us</h2>
+                <p><a href="">The Team</a></p>
+                <p><a href="">Company</a></p>
+                <p><a href="">Reviews</a></p>
+                <p><a href="">Locations</a></p>
+            </div>
+            <div class="footer-item">
+                <h2>Customer Support</h2>
+                <p><a href="">Design Blog</a></p>
+                <p><a href="">FAQ</a></p>
+                <p><a href="">Contact Us</a></p>
+            </div>
+            <div class="footer-item">
+                <h2>For Designers</h2>
+                <p><a href="">Sample Projects</a></p>
+                <p><a href="">Designers Portfolios</a></p>
+                <p><a href="">Designer Sign Up</a></p>
+                <p><a href="">France</a></p>
+            </div>
+            <div class="footer-item">
+                <h2>Agreements</h2>
+                <p><a href="">Our Terms & Conditions</a></p>
+                <p><a href="">Privacy Policy</a></p>
+
+            </div>
+            <div class="footer-item social">
+                <h2>Follow Us</h2>
+                <ul>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-linkedin-in"></i></li>
+                    <li><i class="fa-brands fa-youtube"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>

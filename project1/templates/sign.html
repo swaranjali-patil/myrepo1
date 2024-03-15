@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login and signup form | By code Info</title>
+    <link rel="stylesheet" href="{% static 'css/sign.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <div class="sign-in">
+        <h1 class="sign-head">Sign up</h1>
+        <form action="{% url 'set' %}" method="POST">
+            {% csrf_token %}
+            <input id="username" type="text" placeholder="Username" name="myusername" required />
+            <input id="email" type="email" placeholder=" E-mail" name="myemail" required />
+            <input id="pass" type="password" placeholder="Password" name="mypassword" required />
+            <input id="cnfpass" type="password" placeholder="Confirm Password" name="mycnfpass" required />
+
+            <div class="terms">
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox">I agree to these <a href="#">Terms & conditions</a></label>
+
+            </div>
+            <!-- <button onclick="return validate()">Sign Up</button> -->
+            <input type="submit" value="Submit" onclick="validate()">
+            <div class="member">
+                Already a member? <a href="login.html">
+                    Login Here </a>
+            </div>
+        </form>
+    </div>
+    <script>
+        function validate() {
+            var username = document.getElementById("username");
+            var email = document.getElementById("email");
+            var pass = document.getElementById("pass");
+            var repass = document.getElementById("cnfpass");
+            if (username.value.trim() == "") {
+                alert("No blank values allowed");
+                return false;
+            }
+            else {
+                true;
+            }
+            if (email.value.trim() == "") {
+                alert("Must include @gmail.com");
+                return false;
+            }
+            else {
+                true;
+            }
+            if (password.value.trim() == "") {
+                alert("Password must include 8 characters 1 symbol, 1 number and letters");
+                return false;
+            }
+            else {
+                true;
+            }
+            if (password.value.trim() == "" && password != repass) {
+                alert("Password doesn't match");
+                return false;
+            }
+            else {
+                true;
+            }
+
+        }
+    </script>
+</body>
+
+</html

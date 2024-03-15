@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="user hide-details" id="userBox">
+        <img src="client1.jpg" onclick="openinfo()">
+        <div class="info">
+            <h1>Riha Sharma</h1>
+            <p> working as interior designer at <span>svs</span> </p>
+            <p>From: Mumbai,Maharashtra</p>
+            <a href="#">connnect with me</a>
+
+        </div>
+        <div class="close-icon"onclick="closeinfo()">
+        </div>
+        <script>
+            let userBox = document.getElementById("userBox");
+            function openinfo(){
+                userBox.classList.remove("hide-details");
+            }
+            function closeinfo(){
+                userBox.classList.add("hide-details");
+            }
+    </script>
+</body>
+</html>
